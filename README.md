@@ -1,4 +1,35 @@
-# cowsay
+# tunasay
+
+Added a new option `-o`, balloon padding, to the original cowsay.
+
+Usage:
+
+    cowsay -o 30 -f tuna "Tsinghua University TUNA Association"
+
+```
+                               ______________________________________
+                              < Tsinghua University TUNA Association >
+                               --------------------------------------
+                 _ _ ___         〇
+             __-         `-_    o
+         ___/__        〇   \ 。
+     - '     _/             /
+   '      _ '             /
+ / _- ---            __ -
+/`     |          _ / \  \
+       |       -       \ |
+        \    /          V
+          \  |
+            \ \
+              \
+```
+
+Advanced Usage:
+
+    cowsay -o 30 -f tuna -W 7 "苟利国家生死以岂因祸福避趋之"  | lolcat
+
+![tunsay](tunasay.png)
+## cowsay
 
 ````
  __________________
@@ -37,13 +68,13 @@ It acts in the same way as the original cowsay, so consult `cowsay(1)` or run `c
      \
                                    .::!!!!!!!:.
   .!!!!!:.                        .:!!!!!!!!!!!!
-  ~~~~!!!!!!.                 .:!!!!!!!!!UWWW$$$ 
-      :$$NWX!!:           .:!!!!!!XUWW$$$$$$$$$P 
-      $$$$$##WX!:      .<!!!!UW$$$$"  $$$$$$$$# 
-      $$$$$  $$$UX   :!!UW$$$$$$$$$   4$$$$$* 
-      ^$$$B  $$$$\     $$$$$$$$$$$$   d$$R" 
-        "*$bd$$$$      '*$$$$$$$$$$$o+#" 
-             """"          """"""" 
+  ~~~~!!!!!!.                 .:!!!!!!!!!UWWW$$$
+      :$$NWX!!:           .:!!!!!!XUWW$$$$$$$$$P
+      $$$$$##WX!:      .<!!!!UW$$$$"  $$$$$$$$#
+      $$$$$  $$$UX   :!!UW$$$$$$$$$   4$$$$$*
+      ^$$$B  $$$$\     $$$$$$$$$$$$   d$$R"
+        "*$bd$$$$      '*$$$$$$$$$$$o+#"
+             """"          """""""
 ````
 
 ## Usage as a module
