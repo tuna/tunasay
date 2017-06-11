@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 var argv = require("optimist")
-.usage("Usage: $0 [-e eye_string] [-f cowfile] [-h] [-l] [-n] [-T tongue_string] [-W column] [-bdgpstwy] text\n\n" +
+.usage("Usage: $0 [-e eye_string] [-f cowfile] [-h] [-l] [-n] [-T tongue_string] [-W column] [-bdgpstwyo] text\n\n" +
 	"If any command-line arguments are left over after all switches have been processed, they become the cow's message.\n\n" +
 	"If the program is invoked as cowthink then the cow will think its message instead of saying it.")
 .options({
@@ -15,6 +15,9 @@ var argv = require("optimist")
 	},
 	"f" : {
 		default : "default"
+	},
+	"o" : {
+		default : 0
 	}
 })
 .describe({
@@ -32,7 +35,8 @@ var argv = require("optimist")
 	"n" : "If it is specified, the given message will not be word-wrapped.",
 	"W" : "Specifies roughly where the message should be wrapped. The default is equivalent to -W 40 i.e. wrap words at or before the 40th column.",
 	"f" : "Specifies a cow picture file (''cowfile'') to use. It can be either a path to a cow file or the name of one of cows included in the package.",
-	"l" : "List all cowfiles included in this package."
+	"l" : "List all cowfiles included in this package.",
+	"o" : "Balloon offset."
 })
 .boolean(["b", "d", "g", "p", "s", "t", "w", "y", "n", "h", "l"])
 .argv;
