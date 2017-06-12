@@ -29,6 +29,8 @@ Advanced Usage:
     cowsay -o 30 -f tuna -W 7 "苟利国家生死以岂因祸福避趋之"  | lolcat
 
 ![tunsay](tunasay.png)
+
+ASCII art by @dotkrnl
 ## cowsay
 
 ````
