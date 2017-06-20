@@ -18,7 +18,6 @@ var options = {
 };
 
 if (/tunasay$/.test(process.argv[1])) {
-    options["W"].default = 7;
     options['f'].default = 'tuna';
     options['o'].default = 24;
 }
