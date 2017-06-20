@@ -1,5 +1,7 @@
 # tunasay
 
+![npm](https://img.shields.io/npm/v/tunasay.svg?stype=flat)
+
 tunasay is a fork of nodejs version of [cowsay](https://github.com/piuccio/cowsay), the nodejs translation of cowsay. The original version of cowsay was written in Perl by [Tony Monroe](https://github.com/tnalpgge/rank-amateur-cowsay). In general, tunasay provides a configurable talking tuna.
 
 tunasay provides two new ASCII arts created by @dotkrnl to the original cowsay and added a new option `-o`, balloon padding.
