@@ -1,8 +1,10 @@
 {
   "name": "cowsay",
-  "version": "1.1.9",
-  "description": "cowsay is a configurable talking cow",
+  "version": "1.0.0",
+  "description": "tunasay is a configurable talking tuna",
   "keywords": [
+    "tuna",
+    "tunasay",
     "cow",
     "cowsay",
     "cowthink",
@@ -10,16 +12,17 @@
     "talking",
     "ASCII"
   ],
-  "homepage": "https://github.com/piuccio/cowsay",
+  "homepage": "https://github.com/tuna/tunasay",
   "author": {
-    "name": "Fabio Crisci",
-    "email": "piuccio@gmail.com",
-    "url": "https://github.com/piuccio/"
+    "name": "Xavier Yao",
+    "email": "xavieryao@me.com",
+    "url": "https://github.com/xavieryao/"
   },
   "main": "./index",
   "bin": {
     "cowsay": "./cli.js",
-    "cowthink": "./cli.js"
+    "cowthink": "./cli.js",
+    "tunasay": "./cli.js"
   },
   "files": [
     "index.js",
@@ -29,7 +32,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/piuccio/cowsay.git"
+    "url": "https://github.com/tuna/tunasay.git"
   },
   "scripts": {
     "test": "node test.js"

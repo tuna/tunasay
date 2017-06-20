@@ -1,9 +1,5 @@
 #!/usr/bin/env node
-var argv = require("optimist")
-.usage("Usage: $0 [-e eye_string] [-f cowfile] [-h] [-l] [-n] [-T tongue_string] [-W column] [-bdgpstwyo] text\n\n" +
-	"If any command-line arguments are left over after all switches have been processed, they become the cow's message.\n\n" +
-	"If the program is invoked as cowthink then the cow will think its message instead of saying it.")
-.options({
+var options = {
 	"e" : {
 		default : "oo"
 	},
@@ -19,7 +15,19 @@ var argv = require("optimist")
 	"o" : {
 		default : 0
 	}
-})
+};
+
+if (/tunasay$/.test(process.argv[1])) {
+    options["W"].default = 7;
+    options['f'].default = 'tuna';
+    options['o'].default = 24;
+}
+
+var argv = require("optimist")
+.usage("Usage: $0 [-e eye_string] [-f cowfile] [-h] [-l] [-n] [-T tongue_string] [-W column] [-bdgpstwyo] text\n\n" +
+	"If any command-line arguments are left over after all switches have been processed, they become the cow's message.\n\n" +
+	"If the program is invoked as cowthink then the cow will think its message instead of saying it.")
+.options(options)
 .describe({
 	"b" : "Mode: Borg",
 	"d" : "Mode: Dead",
@@ -61,9 +69,12 @@ if (argv.l) {
 function say () {
 	var module = require("./index");
 
-	var think = /think$/.test(argv["$0"]);
-
-	console.log(think ? module.think(argv) : module.say(argv));
+    if (/tunasay$/.test(argv["$0"])) {
+        console.log(module.say(argv));
+    } else {
+	    var think = /think$/.test(argv["$0"]);
+	    console.log(think ? module.think(argv) : module.say(argv));
+    }
 }
 
 function listCows () {
